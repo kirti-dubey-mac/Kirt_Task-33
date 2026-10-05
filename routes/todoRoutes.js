@@ -5,8 +5,10 @@ const {
   createTodo,
   updateTodo,
   deleteTodo,
+  searchTodos,
 } = require("../controllers/todoController");
 
+router.get("/search", searchTodos);
 router.get("/", getTodos);
 router.post("/", createTodo);
 router.put("/:id", updateTodo);
